@@ -15,13 +15,13 @@ class topSection extends StatelessWidget {
           ),
           SizedBox(height: 20.0,),
           CircleAvatar(
-            backgroundImage: AssetImage('assets/profile.jpg'),
+            backgroundImage:AssetImage('assets/profile.jpg'),
             radius: 60.0,
           ),
           SizedBox(
             height: 30.0,
           ),
-          Text('Vardhan Kottamasu',
+          Text('Sri Vardhan Kottamasu',
             style: TextStyle(
                 fontSize: 30.0,
                 color: Colors.green,

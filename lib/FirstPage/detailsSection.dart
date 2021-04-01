@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'package:url_launcher/url_launcher.dart';
+
 class DetailsSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -16,12 +18,17 @@ class DetailsSection extends StatelessWidget {
               ],
             ),
             SizedBox(height: 10.0),
-            Row(
-              children: <Widget>[
-                Icon(Icons.phone, size: 22.0, color: Colors.green),
-                SizedBox(width: 10.0),
-                Text('+91-8499036837', style: TextStyle(fontSize: 16.0, color: Colors.white),)
-              ],
+            GestureDetector(
+              onTap: (){
+                launch('tel://<+91-8499036837>');
+              },
+              child: Row(
+                children: <Widget>[
+                  Icon(Icons.phone, size: 22.0, color: Colors.green),
+                  SizedBox(width: 10.0),
+                  Text('+91-8499036837', style: TextStyle(fontSize: 16.0, color: Colors.white),)
+                ],
+              ),
             ),
             SizedBox(height: 10.0),
             Row(

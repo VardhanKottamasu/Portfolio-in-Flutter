@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+
 import 'package:portfolio/FirstPage/FirstPageHome.dart';
 import 'package:portfolio/SecondPage/secondPage.dart';
+
+import 'ThirdPage/thirdPage.dart';
 
 void main() {
   runApp(
@@ -20,31 +23,16 @@ class Home extends StatelessWidget {
     return Scaffold(
       body: Center(
         child: PageView(
-          allowImplicitScrolling: true,
             scrollDirection: Axis.vertical,
           children: [
             FirstPageHome(),
-            SecondPage()
+            SecondPage(),
+            ThirdPage()
           ]
         ),
       ),
-      floatingActionButton: Row(
-        mainAxisAlignment: MainAxisAlignment.end,
-        children: <Widget>[
-          FloatingActionButton(
-            onPressed: null,
-            backgroundColor: Colors.grey,
-            child: Icon(Icons.keyboard_arrow_up),
-            mini: true,
-          ),
-          FloatingActionButton(
-            onPressed: null,
-            child: Icon(Icons.keyboard_arrow_down),
-            mini: true,
-            backgroundColor: Colors.grey,
-          ),
-        ],
-      ),
+
     );
   }
+
 }

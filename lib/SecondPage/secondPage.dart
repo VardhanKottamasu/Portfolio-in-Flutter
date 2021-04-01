@@ -1,9 +1,9 @@
-import 'package:expandable/expandable.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-class SecondPage extends StatelessWidget {
 
+import 'package:expandable/expandable.dart';
+
+class SecondPage extends StatelessWidget {
   Widget expCard(String t1,String t2){
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 50.0,
@@ -14,7 +14,6 @@ class SecondPage extends StatelessWidget {
           header: Text(t1,style: TextStyle(
               fontSize: 20.0
           ),),
-          headerAlignment: ExpandablePanelHeaderAlignment.center,
           expanded: Text(t2,softWrap: true,style: TextStyle(
             fontSize: 15.0
           ),),
@@ -24,8 +23,8 @@ class SecondPage extends StatelessWidget {
   }
   @override
   Widget build(BuildContext context) {
-    double _width=MediaQuery.of(context).size.width/2;
-    double _height=MediaQuery.of(context).size.height/2;
+     double _width=MediaQuery.of(context).size.width/2;
+     double _height=MediaQuery.of(context).size.height/2;
     return MaterialApp(
         theme: ThemeData(
             textTheme: GoogleFonts.aBeeZeeTextTheme()),
@@ -49,13 +48,13 @@ class SecondPage extends StatelessWidget {
             ),
             Center(
               child: Container(
-                // width: _width,
-                // height: _height,
+                width: _width,
+                height: _height,
                 child: Column(
                   children: [
-                    expCard('10th Standard', '9.7 GPA\n\nVedamatha English Medium School, Chirala'),
-                    expCard('Intermediate', 'Scored 973\n\nSasi Junior College, Velivennu'),
-                    expCard('Graduation', 'Bachelor of Engineering, CSE\nSCSVMV University\n\n8.6 CGPA')
+                    expCard('10th Standard', '9.7 GPA\nVedamatha English Medium School, Chirala'),
+                    expCard('Intermediate', 'Scored 973\nSasi Junior College, Velivennu'),
+                    expCard('Graduation','8.6 CGPA\nBachelor of Engineering, CSE\nSCSVMV University')
                   ],
                 ),
               ),
