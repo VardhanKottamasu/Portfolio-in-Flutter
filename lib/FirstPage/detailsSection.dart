@@ -9,7 +9,7 @@ class DetailsSection extends StatelessWidget {
       child: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 8.0),
         child: Column(
-          children: <Widget>[
+          children: <Widget> [
             Row(
               children: <Widget>[
                 Icon(Icons.mail, size: 22.0, color: Colors.red),
